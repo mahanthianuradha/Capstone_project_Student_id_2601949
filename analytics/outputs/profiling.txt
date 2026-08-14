@@ -1,0 +1,61 @@
+TITANIC DATASET PROFILING
+================================================================================
+Shape: (891, 15)
+
+Missing-value percentages:
+deck           77.216611
+age            19.865320
+embarked        0.224467
+embark_town     0.224467
+
+deck: 77.22% missing -> KEEP COLUMN and encode missing as an explicit category because missingness exceeds 30% and median/mode imputation would discard substantial information.
+age: 19.87% missing -> IMPUTE because missingness is between 5% and 30%.
+embarked: 0.22% missing -> DROP ROWS because missingness is under 5%.
+embark_town: 0.22% missing -> DROP ROWS because missingness is under 5%.
+
+Cleaning rationale:
+- Columns under 5% missing: affected rows dropped.
+- Numeric columns between 5% and 30%: median imputation.
+- deck has very high missingness, so missingness is preserved as its own category rather than pretending the missing values are random observations.
+
+
+UNIVARIATE ANALYSIS
+===================
+
+Age:
+IQR lower bound: 2.5000
+IQR upper bound: 54.5000
+IQR outlier count: 65
+
+Fare:
+IQR lower bound: -26.7605
+IQR upper bound: 65.6563
+IQR outlier count: 114
+
+Fare mean: 32.0967
+Fare median: 14.4542
+Fare mode: 8.0500
+
+Skewness interpretation:
+Fare is right-skewed: mean > median > mode.
+
+
+
+EXPLORATORY STANDARDIZATION
+===========================
+
+Before:
+            age       fare
+mean  29.315152  32.096681
+std   12.984932  49.697504
+
+After:
+               age          fare
+mean  2.717486e-16  1.398706e-16
+std   1.000563e+00  1.000563e+00
+
+The transformed age and fare columns have means approximately equal to
+zero and standard deviations approximately equal to one. This is an EDA
+sanity check only; these transformed values are NOT used as input to the
+classification models. The modeling pipeline performs its own training-only
+scaling to prevent data leakage.

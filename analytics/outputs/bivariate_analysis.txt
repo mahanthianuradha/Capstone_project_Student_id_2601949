@@ -1,0 +1,67 @@
+SURVIVAL BY SEX
+male      0.188908
+female    0.740385
+
+SURVIVAL BY CLASS
+1    0.626168
+2    0.472826
+3    0.242363
+
+SURVIVAL BY SEX AND CLASS
+   sex  pclass  survival_rate  count
+female       1       0.967391     92
+female       2       0.921053     76
+female       3       0.500000    144
+  male       1       0.368852    122
+  male       2       0.157407    108
+  male       3       0.135447    347
+
+CORRELATION MATRIX
+          survived    pclass       age     sibsp     parch      fare
+survived  1.000000 -0.335549 -0.069822 -0.034040  0.083151  0.255290
+pclass   -0.335549  1.000000 -0.336512  0.081656  0.016824 -0.548193
+age      -0.069822 -0.336512  1.000000 -0.232543 -0.171485  0.093707
+sibsp    -0.034040  0.081656 -0.232543  1.000000  0.414542  0.160887
+parch     0.083151  0.016824 -0.171485  0.414542  1.000000  0.217532
+fare      0.255290 -0.548193  0.093707  0.160887  0.217532  1.000000
+
+TWO STRONGEST CORRELATIONS
+feature_1 feature_2  correlation  absolute_correlation
+   pclass      fare    -0.548193              0.548193
+    sibsp     parch     0.414542              0.414542
+
+
+MULTIVARIATE DATA STORY
+========================
+
+Chart 1 — Survival by class and sex
+-----------------------------------
+This chart shows that sex and passenger class jointly explain substantial
+differences in survival probability. Female passengers generally had higher
+survival rates than male passengers, while first-class passengers generally
+had better survival outcomes than lower-class passengers. The interaction
+between these variables is stronger than considering either variable alone.
+
+Chart 2 — Age, survival and sex
+-------------------------------
+The age distributions show that survivors and non-survivors are not
+identically distributed across sex groups. Younger passengers, particularly
+children, appear among survivors, while male non-survivors are concentrated
+more heavily across adult ages. This supports the idea that age and sex
+provide complementary predictive information.
+
+Chart 3 — Age, fare and survival
+--------------------------------
+The scatter plot combines socioeconomic position, age and survival. Higher
+fares tend to be associated with particular passenger groups and classes,
+while survival is visibly concentrated differently across the fare range.
+The pattern suggests that fare acts partly as a proxy for socioeconomic
+status and passenger class.
+
+Chart 4 — Family size and sex
+-----------------------------
+Family size also contributes to the survival story. Survival rates vary
+across family-size groups, and the pattern differs between men and women.
+This suggests that the circumstances associated with traveling alone or
+with relatives may have influenced survival, although the relationship is
+not necessarily monotonic.

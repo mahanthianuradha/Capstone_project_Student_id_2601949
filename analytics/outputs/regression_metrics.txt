@@ -1,0 +1,27 @@
+
+FARE REGRESSION
+===============
+
+Features used:
+['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'embarked', 'adult_male', 'alone']
+
+MAE:
+21.1000
+
+RMSE:
+41.7040
+
+R²:
+0.3481
+
+Adjusted R²:
+0.2921
+
+Number of regression coefficients:
+14
+
+Residual-vs-prediction absolute residual correlation:
+0.3433
+
+Heteroscedasticity conclusion:
+The residual plot shows evidence consistent with heteroscedasticity because the magnitude of residuals changes systematically with predicted fare.
