@@ -1,0 +1,20 @@
+
+UNIVARIATE ANALYSIS
+===================
+
+Age:
+IQR lower bound: 2.5000
+IQR upper bound: 54.5000
+IQR outlier count: 65
+
+Fare:
+IQR lower bound: -26.7605
+IQR upper bound: 65.6563
+IQR outlier count: 114
+
+Fare mean: 32.0967
+Fare median: 14.4542
+Fare mode: 8.0500
+
+Skewness interpretation:
+Fare is right-skewed: mean > median > mode.
