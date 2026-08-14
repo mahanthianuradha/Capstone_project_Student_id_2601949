@@ -1,0 +1,19 @@
+
+RANDOM FOREST HYPERPARAMETER TUNING
+===================================
+
+Scoring metric:
+F1
+
+Best parameters:
+{'classifier__max_depth': 10, 'classifier__max_features': 'sqrt', 'classifier__n_estimators': 100}
+
+Best cross-validation F1:
+0.7653
+
+OOB score:
+0.8115
+
+The RandomForestClassifier was explicitly constructed with
+oob_score=True and bootstrap=True, allowing the fitted estimator's
+oob_score_ attribute to be reported.

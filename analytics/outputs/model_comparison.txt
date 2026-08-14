@@ -1,0 +1,24 @@
+CLASSIFICATION METRICS
+         Classifier  Accuracy  Precision   Recall       F1      AUC
+Logistic Regression  0.808989   0.783333 0.691176 0.734375 0.860963
+      Decision Tree  0.764045   0.760000 0.558824 0.644068 0.837366
+      Random Forest  0.803371   0.761905 0.705882 0.732824 0.823663
+
+REGRESSION METRICS
+              Regression Model       MAE      RMSE       R2  Adjusted R2
+Multivariate Linear Regression 21.100013 41.704005 0.348103     0.292112
+
+
+FINAL MODEL RECOMMENDATION
+==========================
+
+The recommended classifier is Logistic Regression, selected because it
+achieved the strongest F1 score among the three classifiers on the held-out
+test set. Its accuracy was 0.809, precision
+was 0.783, recall was
+0.691, F1 was 0.734,
+and AUC was 0.861. F1 is particularly useful here
+because the survival classes are not perfectly balanced and it considers both
+precision and recall. The regression model is reported separately because
+MAE, RMSE, R² and Adjusted R² measure a different prediction problem and must
+not be interpreted as directly comparable to classification metrics.

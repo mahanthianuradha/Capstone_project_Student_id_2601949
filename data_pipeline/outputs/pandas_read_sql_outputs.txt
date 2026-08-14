@@ -1,0 +1,20 @@
+RESULT 1 - pd.read_sql(query_2_order_by_limit)
+================================================================================
+                                                                 title  price_gbp  rating
+                                     Last One Home (New Beginnings #1)      59.98       3
+                                         Boar Island (Anna Pigeon #19)      59.48       3
+                                             The Improbability of Love      59.45       1
+                                                       Miller's Valley      58.54       2
+                                                      Digital Fortress      58.00       5
+The No. 1 Ladies' Detective Agency (No. 1 Ladies' Detective Agency #1)      57.70       4
+                                         Kitchens of the Great Midwest      57.20       5
+                                                      The Dinner Party      56.54       2
+                                                   The Past Never Ends      56.50       4
+                                                                 Shtum      55.84       4
+
+RESULT 2 - pd.read_sql(query_3_distinct_categories)
+================================================================================
+     category_name
+           Fiction
+Historical Fiction
+           Mystery
